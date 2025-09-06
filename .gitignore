@@ -1,0 +1,51 @@
+# =========================================================================
+# ARQUIVO .GITIGNORE PARA O PROJETO DE IRRIGAÇÃO INTELIGENTE
+# Este arquivo instrui o Git a ignorar arquivos sensíveis e desnecessários.
+# =========================================================================
+
+# 1. ARQUIVOS SENSÍVEIS E DE CONFIGURAÇÃO PESSOAL (O MAIS IMPORTANTE!)
+# Nunca envie credenciais para o repositório público.
+secrets.h
+google-services.json
+*.pem
+*.key
+*.crt
+
+# 2. ARQUIVOS GERADOS PELO FLUTTER E DART
+# Estes arquivos são gerados localmente durante a compilação.
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+ios/Pods/
+ios/Flutter/App.framework
+ios/Flutter/engine_configurations.xcconfig
+ios/Flutter/Generated.xcconfig
+ios/.symlinks/
+ios/Runner/GeneratedPluginRegistrant.*
+*.jks
+*.keystore
+
+# 3. ARQUIVOS GERADOS PELO SISTEMA OPERACIONAL (WINDOWS, MACOS, LINUX)
+Thumbs.db
+ehthumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# 4. ARQUIVOS DE CONFIGURAÇÃO DE EDITORES DE CÓDIGO (IDE)
+.idea/
+.vscode/
+*.iml
+*.suo
+nbproject/
+
+# 5. ARQUIVOS DE LOG E TEMPORÁRIOS
+*.log
+*.tmp
+*.temp
