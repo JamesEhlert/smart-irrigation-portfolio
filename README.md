@@ -10,7 +10,10 @@ Este projeto representa a **Versão 2.0** de um sistema originalmente concebido 
 
 Esta nova versão é uma evolução completa, reconstruída com o objetivo de aplicar tecnologias de ponta e melhores práticas de mercado. A principal melhoria foi a substituição da interface web por um **aplicativo mobile completo e reativo, desenvolvido em Flutter**, e a reestruturação de todo o backend para uma arquitetura de nuvem híbrida e escalável.
 
-* **Acesse o TCC original aqui:** [Trabalho de Conclusão de Curso - Sistema de Irrigação Automatizado](https://biblioteca.ifsul.edu.br/pergamumweb/downloadArquivo?vinculo=MTlDRDIzOVkyOWtSVzF3Y21WellUMDBOREltWVdObGNuWnZQVFk1T0Rrd0puTmxjVkJoY21GbmNtRm1iejB4Sm5ObGNWTmxZMkZ2UFRnbWEyRnlaR1Y0UFU0bWJHOWpZV3hCY25GMWFYWnZQVU5QVFZCQlVsUkpURWhCVFVWT1ZFOG1ibTl0WlVOaGJXbHVhRzg5TURBd01EWTBMekF3TURBMk5EY3dMbkJrWmc9PTYwQkM2Qzg=&nomeExtensao=.pdf)
+* **Acesse o TCC original aqui:** [Trabalho de Conclusão de Curso - MODELAGEM E PROTOTIPAGEM DE UM
+SISTEMA DE IRRIGAÇÃO INTELIGENTE
+BASEADO EM INTERNET DAS COISAS (IOT) E
+COMPUTAÇÃO EM NUVEM](https://biblioteca.ifsul.edu.br/pergamumweb/downloadArquivo?vinculo=MTlDRDIzOVkyOWtSVzF3Y21WellUMDBOREltWVdObGNuWnZQVFk1T0Rrd0puTmxjVkJoY21GbmNtRm1iejB4Sm5ObGNWTmxZMkZ2UFRnbWEyRnlaR1Y0UFU0bWJHOWpZV3hCY25GMWFYWnZQVU5QVFZCQlVsUkpURWhCVFVWT1ZFOG1ibTl0WlVOaGJXbHVhRzg5TURBd01EWTBMekF3TURBMk5EY3dMbkJrWmc9PTYwQkM2Qzg=&nomeExtensao=.pdf)
 
 ---
 ### Principais Funcionalidades
@@ -93,4 +96,61 @@ Este projeto é uma plataforma funcional e robusta, mas está em constante evolu
 * **[ ] Suporte Multi-plataforma (Web & iOS):**
     * Aproveitar o poder do Flutter para compilar e adaptar a base de código existente, criando uma versão web para acesso via desktop e uma versão para iOS.
 * **[ ] Implementação de Tema Escuro (Dark Mode):**
-    * Adicionar a opção de um tema escuro na interface do aplicativo para melhorar a experiência de uso.   ///
+    * Adicionar a opção de um tema escuro na interface do aplicativo para melhorar a experiência de uso.
+
+### Demonstração Visual
+
+Abaixo estão algumas telas do aplicativo mobile, demonstrando a interface limpa, reativa e funcional desenvolvida com Flutter.
+
+| Tela de Login | Dashboard Principal | Lista de Agendamentos |
+| :---: | :---: | :---: |
+| ![Tela de Login do Aplicativo](assets/app_screenshot_01_login.png) | ![Dashboard com a leitura de umidade](assets/app_screenshot_02_dashboard.png) | ![Lista de agendamentos com toggle de status](assets/app_screenshot_03_schedules_list.png) |
+| *Interface de login segura, integrada com o Firebase Authentication.* | *Dashboard principal exibe dados em tempo real da nuvem AWS.* | *Gerenciamento de agendamentos com atualização de status instantânea via Firestore.* |
+
+| Edição de Agendamento | Histórico de Leituras | Detalhes do Relatório |
+| :---: | :---: | :---: |
+| ![Formulário de criação/edição de agendamentos](assets/app_screenshot_04_schedule_edit.png) | ![Histórico de leituras com paginação](assets/app_screenshot_05_history.png) | ![Pop-up com detalhes do motivo da ação ignorada](assets/app_screenshot_06_logs_detail.png) |
+| *Formulário completo para a criação e edição de regras de irrigação.* | *Tela de histórico com paginação para lidar com grandes volumes de dados de forma eficiente.* | *Pop-up de detalhes que garante transparência sobre as decisões do sistema.* |
+
+| Tela de Ajustes |
+| :---: |
+| ![Tela de ajustes e configuração do dispositivo](assets/app_screenshot_07_settings.png) |
+| *Painel de configurações para personalização do dispositivo pelo usuário.* |
+
+
+### Demonstração em Vídeo
+
+Para uma visão completa do fluxo de usuário, da reatividade do aplicativo e do funcionamento do sistema, assista à demonstração em vídeo abaixo. O vídeo cobre desde o login até o acionamento manual e a visualização dos agendamentos inteligentes.
+
+[![Demonstração do Sistema de Irrigação Inteligente](assets/video_thumbnail.png)](https://www.youtube.com/watch?v=06JOLayaMjQ)
+
+*Clique na imagem para assistir ao vídeo no YouTube.*
+
+---
+
+
+### Como Configurar e Executar
+
+Este repositório serve como um portfólio e case de estudo. O código-fonte completo é fornecido para demonstrar a arquitetura e as habilidades aplicadas. Para replicar o projeto, seria necessário um ambiente de desenvolvimento com as seguintes configurações:
+
+**Pré-requisitos:**
+* Contas ativas na **Amazon Web Services (AWS)** e no **Google Cloud (Firebase)**.
+* **Flutter SDK** e **Android Studio** configurados.
+* **Git** instalado na máquina local.
+
+**Passos de Configuração:**
+1.  Configurar todos os serviços na AWS (IoT Core, Lambda, DynamoDB, etc.) e no Firebase (Authentication, Firestore) conforme descrito na arquitetura.
+2.  Clonar este repositório: `git clone [https://github.com/JamesEhlert/smart-irrigation-portfolio]`.
+3.  Preencher os arquivos de template com as suas próprias credenciais:
+    * `firmware_esp32/secrets.h.template` renomeado para `secrets.h`.
+    * `flutter_app/android/app/google-services.json.template` substituído pelo seu `google-services.json`.
+4.  Executar `flutter pub get` dentro do diretório `flutter_app` para instalar as dependências.
+
+
+### Autor e Contato
+
+Este projeto foi idealizado e desenvolvido por **James Rafael Ehlert Reinard**.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/james-ehlert-reinard/)
+
+Obrigado pela sua visita! Sinta-se à vontade para entrar em contato.
